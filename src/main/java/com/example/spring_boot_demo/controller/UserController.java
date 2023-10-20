@@ -15,8 +15,8 @@ public class UserController {
     @Resource
     private UserService userService;
     @GetMapping(value="/list")
-    public R hello() {
+    public String hello() {
         List<UserInfo> userInfoList = userService.findList();
-        return R.okData(userInfoList);
+        return userInfoList.toString();
     }
 }
