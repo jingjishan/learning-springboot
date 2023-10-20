@@ -18,20 +18,20 @@ import java.util.Scanner;
 /**
  * @program: base
  * @description: 可以快速生成 Entity、Mapper、Mapper XML、Service、Controller等各个模块的代码
- * @author: cxc
+ * @author:
  * @create: 2023-04-02 17:00
  **/
 public class CodeGenerator {
     //todo: 将数据写到配置文件
     // 数据库连接配置
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String JDBC_URL = "jdbc:mysql://10.202.10.228:3306/mytest?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&allowMultiQueries=true";
-    private static final String JDBC_USER_NAME = "admin";
-    private static final String JDBC_PASSOWRD = "1123456";
+    private static final String JDBC_URL = "jdbc:mysql://10.202.10.228:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&allowMultiQueries=true";
+    private static final String JDBC_USER_NAME = "root";
+    private static final String JDBC_PASSOWRD = "123456";
 
     // 包名和模块名
     private static final String PACKAGE_NAME = "com.example.spring_boot_demo";
-    private static final String ENTITY_LOCATION = "entity";
+    private static final String ENTITY_LOCATION = "pojo";
 
     private static final String AUTHOR = "jingjishan";
 
