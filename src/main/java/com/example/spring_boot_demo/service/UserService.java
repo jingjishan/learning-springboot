@@ -1,9 +1,14 @@
 package com.example.spring_boot_demo.service;
 
-import com.example.spring_boot_demo.pojo.UserInfo;
+import com.example.spring_boot_demo.dao.UserDao;
+import com.example.spring_boot_demo.entity.vo.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 public interface UserService {
-    List<UserInfo> findList();
+
+    User selectByPrimaryKey(Long id);
+
+
 }

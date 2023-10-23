@@ -1,20 +1,24 @@
 package com.example.spring_boot_demo.service.impl;
-import com.example.spring_boot_demo.mapper.UserMapper;
-import com.example.spring_boot_demo.pojo.UserInfo;
+
+import com.example.spring_boot_demo.dao.UserDao;
+import com.example.spring_boot_demo.entity.vo.User;
 import com.example.spring_boot_demo.service.UserService;
-import com.example.spring_boot_demo.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.util.List;
-
+/**
+ * @program: learning-springboot
+ * @description:
+ * @author: cxc
+ * @create: 2023-10-23 16:47
+ **/
 @Service
-public class UserServiceImpl implements UserService{
-    @Resource
-    private UserMapper userMapper;
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    UserDao userDao;
     @Override
-    public List<UserInfo> findList() {
-        return userMapper.selectList();
+    public User selectByPrimaryKey(Long id) {
+        return userDao.selectByPrimaryKey(id);
     }
 }
-
